@@ -497,7 +497,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonadep/proprietary/odm/etc/init/calibrationOutput_uw_686.rc:$(TARGET_COPY_OUT_ODM)/etc/init/calibrationOutput_uw_686.rc \
     vendor/oneplus/lemonadep/proprietary/odm/etc/init/calibrationOutput_wt.rc:$(TARGET_COPY_OUT_ODM)/etc/init/calibrationOutput_wt.rc \
     vendor/oneplus/lemonadep/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc \
-    vendor/oneplus/lemonadep/proprietary/odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc \
     vendor/oneplus/lemonadep/proprietary/odm/etc/init/vendor.qti.esepowermanager@1.1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.qti.esepowermanager@1.1-service.rc \
     vendor/oneplus/lemonadep/proprietary/odm/etc/init/vendor.qti.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.qti.secure_element@1.2-service.rc \
     vendor/oneplus/lemonadep/proprietary/odm/etc/inparm/iris5/inParm1.txt:$(TARGET_COPY_OUT_ODM)/etc/inparm/iris5/inParm1.txt \
@@ -705,7 +704,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/lemonadep/proprietary/vendor/firmware/vpu20_4v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v_unsigned.mbn
 
 PRODUCT_PACKAGES += \
-    libcamxexternalformatutils \
     com.qti.camx.chiiqutils \
     com.qti.eisv2 \
     com.qti.eisv3 \
@@ -785,7 +783,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.mcx.usecase.extension \
     camera.qcom \
     com.qti.chi.override \
-    libPlaneSegmentationWrapper \
     libSonyIMX471RmscLibrary \
     libaidenoiser \
     libalsc \
@@ -793,6 +790,7 @@ PRODUCT_PACKAGES += \
     libbitmlenginev2 \
     libcamera_nn_stub \
     libcamerapostproc \
+    libcamxexternalformatutils \
     libcamxfacialfeatures \
     libcamxfdalgo \
     libcamxfdengine \
@@ -809,8 +807,6 @@ PRODUCT_PACKAGES += \
     libcvface_api \
     libhwconfigurationutil \
     libipebpsstriping \
-    libipebpsstriping170 \
-    libipebpsstripingpck \
     libjpege \
     libmctfengine_stub \
     libmidasserviceintf \
@@ -836,7 +832,6 @@ PRODUCT_PACKAGES += \
     libtfestriping \
     libthreadutils \
     vendor.oplus.hardware.cameraextension-V1-ndk_platform \
-    vendor.oplus.hardware.cammidasservice-V1-ndk_platform_vendor \
     vendor.oplus.hardware.cammidasservice@1.0 \
     vendor.oplus.hardware.osense.client-V1-ndk_platform \
     vendor.oplus.hardware.sendextcamcmd-V1-ndk_platform \
@@ -844,10 +839,9 @@ PRODUCT_PACKAGES += \
     libDeVIS \
     libdehaze \
     libfastov_dsp \
-    libnightvision \
-    libVDBlurlessAPI_v2 \
     liblvimfs \
     liblvimfs_wrapper \
+    libnightvision \
     anc.hal \
     android.hardware.secure_element@1.0-impl \
     com.qti.sensor.gc02m1b.lemonade \
@@ -857,55 +851,30 @@ PRODUCT_PACKAGES += \
     com.qti.sensor.ov08a10.lemonade \
     com.arcsoft.node.eisv2 \
     com.arcsoft.node.smooth_transition \
-    com.oplus.node.pilot \
     com.oplus.node.preview \
     com.oplus.node.rtb \
     com.oplus.node.videoenhance \
     fingerprint.goodix_G3.default \
     vendor.qti.esepowermanager@1.1-impl \
-    lib2DSlender \
     libAlgoInterface \
     libAlgoProcess \
-    libAncFilter \
-    libAncHumBokeh \
-    libAncHumBokehPost \
-    libAncHumVideoBase \
-    libAncHumanDoubleExposure \
-    libAncHumanRetain \
-    libAncHumanSegFigureFusion \
-    libAncSegBaseSdk \
     libAncSegmentSdk \
-    libBokehPre \
     libCOppLceTonemapAPI \
-    libCaptureBokeh \
     libEIS \
-    libFDClite \
     libFaceBeautyCap \
-    libFaceBeautyJni \
     libFaceBeautyPICap \
     libFaceBeautyPre \
     libFaceDistortionCorrection \
-    libFilterWrapper \
     libImageWarpMask \
     libOGLManager \
     libOPLUS_SCPortrait \
-    libPerfectColor \
     libPerfectlyClearCrux \
     libPerfectlyClearCruxOpt \
-    libPlatformValidatorShared \
     libPolarrRender \
     libPreviewDecisionOld \
-    libQnnHtpAltPrepStub \
     libQnnHtpStub \
-    libRbsFlow_cap \
-    libRedeyeReduce \
     libSNPE \
     libSNPE_G \
-    libSchedAssistExtImpl_vendor \
-    libSuperRaw \
-    libSuperTextWrapper \
-    libTeeClient \
-    libTrafficMode \
     libVDBayerHDR \
     libVDBlurless \
     libVDDualCameraBlurlessAPI \
@@ -916,31 +885,15 @@ PRODUCT_PACKAGES += \
     libVideoEnhance \
     libWaterMark \
     libWaterMode \
-    libXDocProcessSDK \
-    libYTCommon \
     lib_oplus_starburst_capture \
     lib_oplus_starburst_preview \
     lib_rectify \
-    libaiboost \
-    libaiboost_QnnHtpAltPrepStub \
-    libaiboost_QnnHtpStub \
-    libaiboost_hexagon \
-    libaiboost_qnn_sr \
-    libaiboost_sr \
-    libaiboost_ubwc \
     libaisal \
-    libaisd \
-    libaiseg \
-    libalCFR \
-    libancbase_rt_bokeh \
-    libancbase_segbase \
     libancbase_segment \
     libaps_frame_registration \
     libapsdarksight \
     libapsexif \
     libapsjpeg \
-    libapspng \
-    libapsyuv \
     libarcsoft_calibverify_TriCamera \
     libarcsoft_distortion_correction \
     libarcsoft_dual_sat \
@@ -960,8 +913,6 @@ PRODUCT_PACKAGES += \
     libarcsoft_high_dynamic_range_couple_v4 \
     libarcsoft_high_dynamic_range_v4 \
     libarcsoft_lensstaindetection \
-    libarcsoft_long_exposure_capture \
-    libarcsoft_long_exposure_preview \
     libarcsoft_low_light_hdr \
     libarcsoft_pic_best \
     libarcsoft_portraitSN_hvx_stub \
@@ -977,12 +928,6 @@ PRODUCT_PACKAGES += \
     libarcsoft_triple_sat \
     libarcsoft_triple_zoomtranslator \
     libarcsoft_videoautozoom \
-    libcalculator \
-    libcalculator_domains \
-    libcalculator_htp \
-    libcdm_metrics_protos \
-    libcdm_protos \
-    libcom.oplus.calidatacontainer \
     libdualcam_image_optical_zoom \
     libdualcam_optical_zoom_control \
     libdualcam_video_optical_zoom \
@@ -991,24 +936,17 @@ PRODUCT_PACKAGES += \
     libhta \
     libhwconfigurationutil_odm \
     libhyperlapse \
-    libimgClarityEvaluate \
     libml_util \
     libmpbase \
-    libnpu \
     libolc_vnd \
     libop-ai-beauty-body-detection \
     libop-ai-beauty-faceretouch-cn \
     liboplus_dehaze_module \
-    liboplusvppfilter \
     liboptical_zoom_dc \
     liboptical_zoom_vs \
     libormshalclient \
     libosenseaidlhalclient \
     libosensehalclient \
-    libosie_process \
-    libosie_stub \
-    libpngwrapper \
-    libpnscr2_aidl \
     libsnpe_dsp_domains_v2 \
     libsnpe_dsp_domains_v3 \
     libsnpe_htp \
@@ -1018,13 +956,10 @@ PRODUCT_PACKAGES += \
     libstblur_capture_api \
     libstface_fd_api \
     libstfd_mobile_api \
-    libsymphony-cpu \
-    libsymphonypower \
     libtriplecam_image_optical_zoom \
     libtriplecam_optical_zoom_control \
     libtriplecam_video_optical_zoom \
     libwatermark_photo \
-    libyuvwrapper \
     vendor.oplus.hardware.cameraextension-V1-service-impl \
     vendor.oplus.hardware.cammidasservice-V1-ndk_platform \
     vendor.oplus.hardware.commondcs-V1-ndk_platform \
@@ -1075,10 +1010,8 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libvdsuperphoto_skel_so \
     odm_lib_rfsa_adsp_libworker_pool_so \
     manifest_oplus_cameraextension_aidl.xml \
-    manifest_oplus_cammidasservice_aidl.xml \
     manifest_oplus_fingerprint.xml \
     vendor.oplus.hardware.biometrics.fingerprint@2.1-service \
-    vendor.oplus.hardware.cammidasservice-V1-service \
     vendor.qti.esepowermanager@1.1-service \
     vendor.qti.secure_element@1.2-service \
     init.oplus.fingerprints
